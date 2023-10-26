@@ -1,8 +1,8 @@
 import React from "react";
+import { Droppable } from "react-beautiful-dnd";
 import { Todo } from "../model";
 import "./style.css";
 import SingleTodo from "./SingleTodo";
-import { Droppable } from "react-beautiful-dnd";
 
 interface Props {
   todos: Todo[];
@@ -60,7 +60,7 @@ const TodoList: React.FC<Props> = ({
                 baseUrl={baseUrl}
                 key={todo.id}
                 todo={todo}
-                index={index} 
+                index={index}
                 // work on stporing index in db
               />
             ))}

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { DragDropContext, DropResult } from "react-beautiful-dnd";
+import axios from "axios";
 import "./App.css";
 import InputField from "./components/InputField";
 import { Todo } from "./model";
 import TodoList from "./components/TodoList";
-import { DragDropContext, DropResult } from "react-beautiful-dnd";
-import axios from "axios";
 import getDate from "./utils";
 
 const App: React.FC = () => {
@@ -47,7 +47,7 @@ const App: React.FC = () => {
         .catch((err) => {
           console.log(getDate(), "post: todo not created -", err);
         });
-        setTodo("");
+      setTodo("");
       setDataChange(!dataChange);
     }
   };
