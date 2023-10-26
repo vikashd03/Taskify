@@ -1,0 +1,9 @@
+{
+    "verbose": false,
+    "watch": ["src"],
+    "ext": "ts,json",
+    "exec": "ts-node ./src/index.ts",
+    "pollingInterval": 100,
+    "legacyWatch": true,
+    "ignore": ["data","src/**/*.spec.ts"]
+}   
