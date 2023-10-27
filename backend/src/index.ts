@@ -13,7 +13,7 @@ const dbUrl: string = process.env.DATABASE_URL || "mongodb://localhost/taskify";
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.raw());
-app.use(cors());
+app.use(cors({ origin: '*' }));
 
 app.use("/taskify/", taskifyRouter);
 

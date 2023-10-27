@@ -34,6 +34,11 @@ const App: React.FC = () => {
     fetchAndSetTodos("completedtodos");
   }, [dataChange]);
 
+  // setInterval(() => {
+  //   fetchAndSetTodos("todos");
+  //   fetchAndSetTodos("completedtodos");
+  // }, 1000 * 60);
+
   const handleAdd = async (e: React.FormEvent) => {
     e.preventDefault();
     if (todo) {

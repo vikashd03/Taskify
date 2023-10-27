@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Draggable } from "react-beautiful-dnd";
 import { Todo } from "../model";
-import { AiFillEdit, AiFillDelete } from "react-icons/ai";
+import { AiFillEdit, AiFillDelete, AiOutlineClose } from "react-icons/ai";
 import { MdDone } from "react-icons/md";
 import "./style.css";
 import getDate from "../utils";
@@ -30,7 +30,19 @@ const SingleTodo: React.FC<Props> = ({
     await axios
       .patch(url, { isDone: true })
       .then(() => {
-        console.log(getDate(), "completed", id);
+        console.log(getDate(), "marked completed", id);
+      })
+      .catch((err) => {
+        console.log(getDate(), err, id);
+      });
+    setDataChange(!dataChange);
+  };
+
+  const handleUnDone = async (id: number) => {
+    await axios
+      .patch(url, { isDone: false })
+      .then(() => {
+        console.log(getDate(), "marked incompleted", id);
       })
       .catch((err) => {
         console.log(getDate(), err, id);
@@ -119,7 +131,9 @@ const SingleTodo: React.FC<Props> = ({
                 <MdDone />
               </span>
             ) : (
-              ""
+              <span className="icon" onClick={() => handleUnDone(todo.id)}>
+                <AiOutlineClose />
+              </span>
             )}
           </div>
         </form>

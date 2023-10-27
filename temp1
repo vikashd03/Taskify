@@ -1,0 +1,1 @@
+yarn add @types/minimatch @types/react @types/react-dom @typescript-eslint/eslint-plugin @typescript-eslint/parser @vitejs/plugin-react eslint eslint-plugin-react-hooks eslint-plugin-react-refresh react-scripts typescript vite --dev

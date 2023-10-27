@@ -5,5 +5,5 @@
     "exec": "ts-node ./src/index.ts",
     "pollingInterval": 100,
     "legacyWatch": true,
-    "ignore": ["data","src/**/*.spec.ts"]
+    "ignore": ["dist","src/**/*.spec.ts","node_modules"]
 }   
