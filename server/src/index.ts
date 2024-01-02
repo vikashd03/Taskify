@@ -9,7 +9,7 @@ dotenv.config();
 
 const app: Application = express();
 const port = process.env.PORT || 8000;
-const dbUrl: string = process.env.DATABASE_URL || "mongodb://localhost/taskify";
+const dbUrl: string = process.env.MONGO_URI || "mongodb://localhost/taskify";
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.raw());
