@@ -7,7 +7,7 @@ Taskify is a simple Todo List application built with the MERN stack (MongoDB, Ex
 - Add, edit, and delete tasks
 - Mark tasks as completed
 - Organize tasks into categories
-- User authentication (coming soon)
+- User authentication - Integration
 
 ## Tech Stack
 
